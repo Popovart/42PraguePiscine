@@ -1,51 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:04:42 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 20:12:12 by dpopov           ###   ########.fr       */
+/*   Created: 2024/08/07 20:11:53 by dpopov            #+#    #+#             */
+/*   Updated: 2024/08/07 20:25:18 by dpopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
-#include "unistd.h"
 
-void	ft_print_comb2(void)
-{
-	char	buffer[6];
-	int		i;
-	int		j;
-	int		param;
+void ft_print_combn(int n) {
+    char buffer[3];
+    int length = snprintf(buffer, sizeof(buffer), "%d", n);  
 
-	i = 0;
-	param = 0;
-	while (i <= 99)
-	{
-		j = param;
-		while (j <= 99)
-		{
-			if (i != j)
-			{
-				snprintf(buffer, sizeof(buffer), "%02d %02d", i, j);
-				write(1, buffer, 5);
-				if (i != 98)
-				{
-					write(1, ", ", 2);
-				}
-			}
-			j++;
-		}
-		if (param == 0)
-		{
-			param = 2;
-		}
-		else
-		{
-			param++;
-		}
-		i++;
-	}
+    
+    
+    write(1, buffer, length);
+};
+
+int main() {
+    ft_print_combn(4);
+    return 0;
 }
