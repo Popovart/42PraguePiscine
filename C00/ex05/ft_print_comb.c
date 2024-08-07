@@ -1,54 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 15:04:42 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 17:44:57 by dpopov           ###   ########.fr       */
+/*   Created: 2024/08/07 12:09:39 by dpopov            #+#    #+#             */
+/*   Updated: 2024/08/07 18:40:48 by dpopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
 #include "unistd.h"
 
-void	ft_print_comb2(void)
+void	ft_print_comb(void)
 {
-	char	buffer[6];
-	int		i;
-	int		j;
-	int		param;
+	char	num1;
+	char	num2;
+	char	num3;
 
-	i = 0;
-	param = 0;
-	while (i <= 99)
+	num1 = '0';
+	while (num1 <= '7')
 	{
-		j = param;
-		while (j <= 99)
+		num2 = num1 + 1;
+		while (num2 <= '8')
 		{
-			if (i != j)
+			num3 = num2 + 1;
+			while (num3 <= '9')
 			{
-				snprintf(buffer, sizeof(buffer), "%02d %02d", i, j);
-				write(1, buffer, 5);
-				write(1, ", ", 2);
+				write(1, &num1, 1);
+				write(1, &num2, 1);
+				write(1, &num3, 1);
+				num3++;
+				if (num1 != '7')
+				{
+					write(1, ", ", 2);
+				}
 			}
-			j++;
+			num2++;
 		}
-		if (param == 0)
-		{
-			param = 2;
-		}
-		else
-		{
-			param++;
-		}
-		i++;
+		num1++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
 }
