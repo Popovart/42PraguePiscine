@@ -6,7 +6,7 @@
 /*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 20:03:28 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/08 15:34:27 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 15:50:33 by dpopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,26 @@ void	reverse(char *str, int length)
 	}
 }
 
+int	isIntMin(int num, char *str, int *length)
+{
+	if (num == -2147483648)
+	{
+		*length = 11;
+		str = "-2147483648";
+		reverse(str, *length);
+		return (0);
+	}
+	return (0);
+}
+
 void	toString(int num, char *str, int *length)
 {
 	int	is_negative;
 
+	if (isIntMin(num, str, length) == 1)
+	{
+		return ;
+	}
 	is_negative = 0;
 	if (num < 0)
 	{
@@ -54,6 +70,8 @@ void	toString(int num, char *str, int *length)
 	reverse(str, *length);
 }
 
+
+
 void	ft_putnbr(int nb)
 {
 	char	buffer[13];
@@ -64,9 +82,8 @@ void	ft_putnbr(int nb)
 	write(1, buffer, length);
 }
 
-
 int	main(void)
 {
-	ft_putnbr(-23004);
+	ft_putnbr(-2147483648);
 	return (0);
 }
