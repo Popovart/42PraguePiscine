@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmitrypopov <dmitrypopov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 11:33:53 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 15:53:13 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 13:21:45 by dmitrypopov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,3 @@ void	ft_print_numbers(void)
 {
 	write(1, "0123456789", 10);
 }
-

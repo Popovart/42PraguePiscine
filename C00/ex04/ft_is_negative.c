@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmitrypopov <dmitrypopov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 11:51:24 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 16:52:43 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 13:21:47 by dmitrypopov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ void	ft_is_negative(int n)
 		write(1, &sign, 1);
 	}
 }
-

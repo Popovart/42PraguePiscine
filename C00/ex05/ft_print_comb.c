@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmitrypopov <dmitrypopov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 12:09:39 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 18:40:48 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 13:22:02 by dmitrypopov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_print_comb(void)
 {
-	char	num1;
-	char	num2;
-	char	num3;
+	char num1;
+	char num2;
+	char num3;
 
 	num1 = '0';
 	while (num1 <= '7')

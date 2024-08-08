@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmitrypopov <dmitrypopov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 15:04:42 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/07 20:12:12 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 13:22:06 by dmitrypopov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,34 @@
 
 void	ft_print_comb2(void)
 {
-	char	buffer[6];
-	int		i;
-	int		j;
-	int		param;
+	int i;
+	int j;
+	char buffer[7];
 
 	i = 0;
-	param = 0;
-	while (i <= 99)
+	j = 1;
+	while (i <= 98)
 	{
-		j = param;
 		while (j <= 99)
 		{
-			if (i != j)
+			buffer[0] = i / 10 + '0';
+			buffer[1] = i % 10 + '0';
+			buffer[2] = ' ';
+			buffer[3] = j / 10 + '0';
+			buffer[4] = j % 10 + '0';
+			if (i == 98 && j == 99)
 			{
-				snprintf(buffer, sizeof(buffer), "%02d %02d", i, j);
 				write(1, buffer, 5);
-				if (i != 98)
-				{
-					write(1, ", ", 2);
-				}
+			}
+			else
+			{
+				buffer[5] = ',';
+				buffer[6] = ' ';
+				write(1, buffer, 7);
 			}
 			j++;
 		}
-		if (param == 0)
-		{
-			param = 2;
-		}
-		else
-		{
-			param++;
-		}
 		i++;
+		j = i + 1;
 	}
 }
