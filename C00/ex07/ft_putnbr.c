@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpopov <dpopov@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmitrypopov <dmitrypopov@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 20:03:28 by dpopov            #+#    #+#             */
-/*   Updated: 2024/08/08 16:10:54 by dpopov           ###   ########.fr       */
+/*   Updated: 2024/08/08 16:15:11 by dmitrypopov      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ void	write_nm(int nb)
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483647)
+	if (nb == -2147483648)
 	{
 		write(1, "-", 1);
-		write_nm(2147483647);
+		write_nm(214748364);
+		write(1, "8", 1);
 		return ;
 	}
 	if (nb < 0)
